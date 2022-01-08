@@ -19,13 +19,13 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    gap: 10px;
     transform-style: preserve-3d;
 }
 
 .container {
     display: flex;
     transform-style: preserve-3d;
+    gap: 20px;
     transform: rotateY(20deg) rotateX(20deg);
     -webkit-transform: rotateY(20deg) rotateX(20deg);
     -moz-transform: rotateY(20deg) rotateX(20deg);
@@ -38,6 +38,20 @@ main {
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
+    transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -ms-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition-delay: calc(0.25s * var(--j));
+}
+
+.container:hover .text {
+    transform: rotateX(-360deg);
+    -webkit-transform: rotateX(-360deg);
+    -moz-transform: rotateX(-360deg);
+    -ms-transform: rotateX(-360deg);
+    -o-transform: rotateX(-360deg);
 }
 
 .container .text ::before {
@@ -45,13 +59,29 @@ main {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #cf1212;
+    background: linear-gradient(-120deg, #0c2238, #612424);
     transform-origin: left;
     transform: rotateY(90deg);
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
+}
+
+.container .text:last-child span {
+    background: linear-gradient(#c9590e, #d8d817a1);
+}
+
+.container .text:last-child ::before {
+    background: linear-gradient(#c9590e94, #d8d817a1);
+}
+
+.container:hover .text:last-child {
+    transform: rotateX(630deg);
+    -webkit-transform: rotateX(630deg);
+    -moz-transform: rotateX(630deg);
+    -ms-transform: rotateX(630deg);
+    -o-transform: rotateX(630deg);
 }
 
 .container .text span {
