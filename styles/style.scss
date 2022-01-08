@@ -40,6 +40,20 @@ main {
     transform-style: preserve-3d;
 }
 
+.container .text ::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #cf1212;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+}
+
 .container .text span {
     position: absolute;
     top: 0;
